@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatRoom</title>
+    <!--the css for jquery.mCustomScrollbar-->
+    <link rel="stylesheet" href="lib/jquery-mCustomScrollbar/css/jquery.mCustomScrollbar.min.css" />
+    <!--the css for this plugin-->
+    <link rel="stylesheet" href="lib/jquery-emoji/css/jquery.emoji.css" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="bg-blur">
+    <!-- 登录盒子 -->
+    <div class="login_box">
+        <p class="title">用户登录</p>
+        <input type="text" placeholder="请输入用户名" id="username" class="niehei">
+        <input type="text" placeholder="请输入密码" id="password" class="heinie">
+        <!-- <p>选择头像</p>
+        <ul class="avatar" id="login_avatar">
+            <li class="now"><img src="images/avatar01.JPG" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar02.JPG" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar03.png" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar04.jpg" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar05.jpg" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar06.png" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar07.png" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar08.png" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar09.png" alt="" ondragstart="return false"></li>
+            <li><img src="images/avatar10.png" alt="" ondragstart="return false"></li>
+        </ul> -->
+        <button class="weui-btn" id="loginBtn">登录</button>
+    </div>
+    <!-- 聊天盒子 -->
+    <div class="container  invisible">
+        <!-- 左侧用户列表 -->
+        <div class="user-list">
+            <div class="header">
+                <div class="avatar">
+                    <img src="images/avatar02.jpg" alt="" class="img avatar_url">
+                </div>
+                <div class="info">
+                    <h3 class="username">清流</h3>
+                </div>
+            </div>
+            <div class="title" class="wocao">
+                <h3 class="wokao">用户列表</h3>
+            </div>
+            <ul>
+                <li class="user">
+                    <div class="avatar"><img src="images/avatar01.jpg" alt=""></div>
+                    <div class="name">群聊</div>
+                </li>
+            </ul>
+        </div>
+        <!-- 聊天主窗口 -->
+        <div class="box">
+            <div class="box-hd">
+                <!-- <div id="chatName"></div> -->
+                <!-- <h3>群聊(<span id="userCount">99</span>)</h3> -->
+                <h3 id="chatName">群聊</h3>
+            </div>
+            <div class="box-bd">
+            </div>
+            <!-- 聊天窗口底部 -->
+            <div class="box-ft">
+                <!-- 内容输入区 -->
+                <div class="content">
+                    <!-- div添加contenteditable即可编辑 -->
+                    <div name="" id="content" class="text" contenteditable></div>
+                </div>
+                <!-- 发送按钮 -->
+                <div class="action">
+                    <span class="desc"></span>
+                    <a class="btn-send" id="btn-send" href="javascript:;">发送</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="lib/jquery-mCustomScrollbar/script/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
