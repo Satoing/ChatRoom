@@ -1,6 +1,6 @@
 # ChatRoom
 ## Description
-蚂蚁前端成电行的结课项目：完成一个聊天室。<br>
+蚂蚁前端成电行的结课项目：完成一个在线聊天室。<br>
 This is the final project of the course about front end which is provided by Ant Group,Alipay.
 ## tools
 `node.js` 和 `websocket`
